@@ -1,0 +1,16 @@
+{
+	"manifest_version": 3,
+	"name": "Qiita-access-helper",
+	"version": "0.0.2",
+	"description": "Qiita等のサイトをNVDAで閲覧する際、見出しとともに不要な読み上げがなされてしまう問題を暫定的に修正します。副作用として一部のサイトでリンクなのにリンクとして読み上げられなくなるかもしれません（？）",
+	"content_scripts": [
+		{
+			"matches": [
+				"https://*/*"
+			],
+			"js": [
+				"content-script.js"
+			]
+		}
+	]
+}
