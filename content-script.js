@@ -8,7 +8,7 @@ function replacer(target) {
   headers.forEach((header) => {
     const a = header.querySelector("a");
 
-    if (a) {
+    if (a && a.textContent.replace(/\s+/g, "") === "") {
       a.ariaHidden = true;
     }
   });
